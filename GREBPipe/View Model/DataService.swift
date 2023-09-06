@@ -40,7 +40,7 @@ public class DataService {
 		}
 		
 		do {
-			let fileURLs = try fileManager.contentsOfDirectory(at: rootDirectory, includingPropertiesForKeys: nil)
+			_ = try fileManager.contentsOfDirectory(at: rootDirectory, includingPropertiesForKeys: nil)
 			// process files
 		} catch {
 			print("Error while enumerating files \(rootDirectory.path): \(error.localizedDescription)")

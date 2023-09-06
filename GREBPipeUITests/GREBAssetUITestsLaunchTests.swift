@@ -1,13 +1,13 @@
 //
-//  GREBAssetUITestsLaunchTests.swift
-//  GREBAssetUITests
+//  GREBPipeUITestsLaunchTests.swift
+//  GREBPipeUITests
 //
 //  Created by Guillermo Molina on 5/9/23.
 //
 
 import XCTest
 
-final class GREBAssetUITestsLaunchTests: XCTestCase {
+final class GREBPipeUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

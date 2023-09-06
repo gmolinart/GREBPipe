@@ -1,6 +1,6 @@
 //
 //  ProjectView.swift
-//  GREBAsset
+//  GREBPipe
 //
 //  Created by Guillermo Molina on 5/9/23.
 //
@@ -16,8 +16,14 @@ struct ProjectView: View {
 	}
 	
 	var body: some View {
-		Text("Hello world")
-	}
+		Text(project.name)
+		VStack{
+			Text("entities")
+			Text("entities")
+			
+		}
+			
+		}
 }
 
 #Preview {

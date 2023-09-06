@@ -1,6 +1,6 @@
 //
 //  Entity.swift
-//  GREBAsset
+//  GREBPipe
 //
 //  Created by Guillermo Molina on 5/9/23.
 //
@@ -15,6 +15,7 @@ import SwiftData
 ///  shots and entities are stored
 ///  in general projects are a way to group
 ///  sequences
+@Model///
 public class Project: Identifiable {
 	public var id = UUID()
 	var name: String
@@ -24,7 +25,7 @@ public class Project: Identifiable {
 	var imageURL: String
 	var entities: [Entity] = []
 	
-	init(name: String,category: String,  detailed_description: String = "", icon:String = "",
+	init(name: String,category: String = "persona",  detailed_description: String = "", icon:String = "",
 			 imageURL: String = "") {
 		self.name = name
 		self.category = category
@@ -47,10 +48,10 @@ public class Project: Identifiable {
 		}
 	}
 	
-		
+	
 	static func preview() -> Project{
-			 Project(name: "indeleble",
+		Project(name: "indeleble",
 						category: "personal",
 						imageURL: "indeleble")
-		 }
+	}
 }

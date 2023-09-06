@@ -1,6 +1,6 @@
 //
 //  Entity.swift
-//  GREBAsset
+//  GREBPipe
 //
 //  Created by Guillermo Molina on 5/9/23.
 //
@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import SwiftData
 
-public class Entity: Identifiable {
+@Model public class Entity: Identifiable {
 	public var id = UUID()
 	var name: String
 	var category: String

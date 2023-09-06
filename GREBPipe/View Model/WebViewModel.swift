@@ -1,12 +1,12 @@
 //
 //  WebViewModel.swift
-//  GREBAsset
+//  GREBPipe
 //
 //  Created by Guillermo Molina on 5/9/23.
 //
 
 import Foundation
-import UIKit
+//import UIKit
 import WebKit
 import SwiftUI
 
