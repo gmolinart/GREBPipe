@@ -1,7 +1,7 @@
 import AppKit
 import SwiftUI
 
-
+import KeyboardShortcuts
 
 extension NSImage {
 	func resize(to newSize: NSSize) -> NSImage {
@@ -36,6 +36,10 @@ struct FloatingPanel: View {
 		.onAppear {
 			NSApplication.shared.keyWindow?.makeFirstResponder(nil)
 		}
+		Form {
+					KeyboardShortcuts.Recorder("Toggle Unicorn Mode:", name: .toggleUnicornMode)
+				}
+		
 	}
 }
 final class Panel: NSPanel {
@@ -43,7 +47,6 @@ final class Panel: NSPanel {
 	
 	init(contentRect: NSRect, backing: NSWindow.BackingStoreType, defer flag: Bool) {
 		super.init(contentRect: contentRect, styleMask: [.nonactivatingPanel, .titled, .fullSizeContentView], backing: backing, defer: flag)
-		
 		
 		// Your NSView
 		let contentView = NSHostingView(rootView: FloatingPanel())
@@ -69,6 +72,19 @@ final class Panel: NSPanel {
 		self.titlebarAppearsTransparent = true
 		self.contentView = NSHostingView(rootView: panelContent)
 		self.isMovableByWindowBackground = true
+		
+		// Add keyboard shortcut (Command + period) for opening and closing the floating panel.
+		KeyboardShortcuts.onKeyUp(for: .toggleUnicornMode) {
+			//      				self.orderOut(nil)
+			print("switch")
+            if self.isVisible {
+                self.orderOut(nil)
+            } else {
+                self.makeKeyAndOrderFront(nil)
+            }
+            
+		}
+		// The panel should close when it loses focus, i.e. when we click outside of it.
 	}
 }
 

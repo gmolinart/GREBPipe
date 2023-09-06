@@ -8,6 +8,12 @@
 import SwiftUI
 import AppKit
 
+
+import KeyboardShortcuts
+
+
+
+
 @main
 struct GREBPipeApp: App {
 		@NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
@@ -28,9 +34,25 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 				defer: false
 		)
 
+
 	 func applicationDidFinishLaunching(_ aNotification: Notification) {
 				// panel.contentView = ...
 				panel.makeKeyAndOrderFront(nil)
 				panel.center()
 	 }
 }
+
+extension KeyboardShortcuts.Name {
+	static let toggleUnicornMode = Self("toggleUnicornMode", default: .init(.k, modifiers: [.command, .option]))
+}
+
+@MainActor
+final class AppState: ObservableObject {
+	init() {
+		KeyboardShortcuts.onKeyUp(for: .toggleUnicornMode) {
+			print("hello world")
+		}
+		
+	}
+}
+
