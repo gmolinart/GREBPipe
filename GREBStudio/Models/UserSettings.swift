@@ -13,58 +13,33 @@ import SwiftData
 
 @Model
 class UserSettings {
+	// The unique identifier for the user settings
 	public var id: UUID = UUID()
+	
+	// Singleton instance of UserSettings
 	static var shared = UserSettings()
+	
+	// The current project associated with the user settings
 	public var project: GProject?
 	
+	// The name of the user
+	public var name: String = ""
 	
-
+	
+	init(name: String, project: GProject?) {
+		self.name = name
+		self.project = project
+	}
 	
 		func get_project() -> GProject? {
 				return self.project
 		}
 	
 		public static func set_project(project: GProject) {
-			self.project = project
+			UserSettings.shared.project = project
+			
 			print("setting project!!! Fantastic")
 		}
 	  
 }
 
-//
-//@Model///
-//public class UserSettings: {
-//   // Conform to Encodable
-//   public var id: UUID = UUID()
-//   var name: String = ""
-//   var project: GProject?
-//   var entity: GEntity?  
-//   
-//	
-//   public func encode(to encoder: Encoder) throws {
-//       var container = encoder.container(keyedBy: CodingKeys.self)
-//       try container.encode(id, forKey: .id)
-//       try container.encode(name, forKey: .name)
-//   }
-//   // Conform to Decodable
-//   public required init(from decoder: Decoder) throws {
-//       let container = try decoder.container(keyedBy: CodingKeys.self)
-//	
-//		self.id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
-//		self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
-//	}
-//	
-//	private enum CodingKeys: String, CodingKey {
-//		case id
-//		case name
-//	}
-//	
-//	init(name: String) {
-//		
-//		self.name = name
-//		
-//		
-//	}
-//	
-//}
-//
