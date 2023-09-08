@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		152C4FF62AA9B9EF00A2C4F4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C4FF32AA9B9EE00A2C4F4 /* Task.swift */; };
+		152C4FF72AA9B9EF00A2C4F4 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C4FF42AA9B9EE00A2C4F4 /* Entity.swift */; };
+		152C4FF82AA9B9EF00A2C4F4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C4FF52AA9B9EF00A2C4F4 /* Project.swift */; };
+		152C4FFB2AA9BDF300A2C4F4 /* PreviewSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C4FFA2AA9BDF300A2C4F4 /* PreviewSampleData.swift */; };
+		152C4FFD2AA9C08200A2C4F4 /* SampleProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C4FFC2AA9C08200A2C4F4 /* SampleProject.swift */; };
+		152C4FFF2AA9CD1B00A2C4F4 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C4FFE2AA9CD1B00A2C4F4 /* ProjectView.swift */; };
+		152C50012AA9CF1C00A2C4F4 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 152C50002AA9CF1C00A2C4F4 /* Fonts */; };
+		152C50032AA9CFE000A2C4F4 /* GrebFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C50022AA9CFDF00A2C4F4 /* GrebFonts.swift */; };
+		152C50052AA9D39700A2C4F4 /* EntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C50042AA9D39700A2C4F4 /* EntityView.swift */; };
+		152C50082AA9E3FD00A2C4F4 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C50072AA9E3FD00A2C4F4 /* TaskView.swift */; };
+		152C500A2AA9ED7B00A2C4F4 /* InputPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C50092AA9ED7B00A2C4F4 /* InputPopupView.swift */; };
+		152C500C2AAA214100A2C4F4 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C500B2AAA214100A2C4F4 /* UserSettings.swift */; };
+		1570EABF2AA96663003C78FD /* GREBStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EABE2AA96663003C78FD /* GREBStudioApp.swift */; };
+		1570EAC12AA96663003C78FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EAC02AA96663003C78FD /* ContentView.swift */; };
+		1570EAC32AA96664003C78FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1570EAC22AA96664003C78FD /* Assets.xcassets */; };
+		1570EAC62AA96664003C78FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1570EAC52AA96664003C78FD /* Preview Assets.xcassets */; };
+		1570EAD12AA96664003C78FD /* GREBStudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EAD02AA96664003C78FD /* GREBStudioTests.swift */; };
+		1570EADB2AA96665003C78FD /* GREBStudioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EADA2AA96665003C78FD /* GREBStudioUITests.swift */; };
+		1570EADD2AA96665003C78FD /* GREBStudioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EADC2AA96665003C78FD /* GREBStudioUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1570EACD2AA96664003C78FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1570EAB32AA96663003C78FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1570EABA2AA96663003C78FD;
+			remoteInfo = GREBStudio;
+		};
+		1570EAD72AA96665003C78FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1570EAB32AA96663003C78FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1570EABA2AA96663003C78FD;
+			remoteInfo = GREBStudio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		152C4FF32AA9B9EE00A2C4F4 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		152C4FF42AA9B9EE00A2C4F4 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		152C4FF52AA9B9EF00A2C4F4 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		152C4FFA2AA9BDF300A2C4F4 /* PreviewSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleData.swift; sourceTree = "<group>"; };
+		152C4FFC2AA9C08200A2C4F4 /* SampleProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProject.swift; sourceTree = "<group>"; };
+		152C4FFE2AA9CD1B00A2C4F4 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		152C50002AA9CF1C00A2C4F4 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		152C50022AA9CFDF00A2C4F4 /* GrebFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrebFonts.swift; sourceTree = "<group>"; };
+		152C50042AA9D39700A2C4F4 /* EntityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityView.swift; sourceTree = "<group>"; };
+		152C50072AA9E3FD00A2C4F4 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		152C50092AA9ED7B00A2C4F4 /* InputPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPopupView.swift; sourceTree = "<group>"; };
+		152C500B2AAA214100A2C4F4 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		1570EABB2AA96663003C78FD /* GREBStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREBStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1570EABE2AA96663003C78FD /* GREBStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GREBStudioApp.swift; sourceTree = "<group>"; };
+		1570EAC02AA96663003C78FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1570EAC22AA96664003C78FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1570EAC52AA96664003C78FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1570EAC72AA96664003C78FD /* GREBStudio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GREBStudio.entitlements; sourceTree = "<group>"; };
+		1570EACC2AA96664003C78FD /* GREBStudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GREBStudioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1570EAD02AA96664003C78FD /* GREBStudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GREBStudioTests.swift; sourceTree = "<group>"; };
+		1570EAD62AA96665003C78FD /* GREBStudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GREBStudioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1570EADA2AA96665003C78FD /* GREBStudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GREBStudioUITests.swift; sourceTree = "<group>"; };
+		1570EADC2AA96665003C78FD /* GREBStudioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GREBStudioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1570EAB82AA96663003C78FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1570EAC92AA96664003C78FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1570EAD32AA96665003C78FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		152C4FF12AA9B99500A2C4F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1570EAC02AA96663003C78FD /* ContentView.swift */,
+				152C50092AA9ED7B00A2C4F4 /* InputPopupView.swift */,
+				152C4FFE2AA9CD1B00A2C4F4 /* ProjectView.swift */,
+				152C50042AA9D39700A2C4F4 /* EntityView.swift */,
+				152C50072AA9E3FD00A2C4F4 /* TaskView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		152C4FF22AA9B9A400A2C4F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				152C50022AA9CFDF00A2C4F4 /* GrebFonts.swift */,
+				152C500B2AAA214100A2C4F4 /* UserSettings.swift */,
+				152C4FF52AA9B9EF00A2C4F4 /* Project.swift */,
+				152C4FF42AA9B9EE00A2C4F4 /* Entity.swift */,
+				152C4FF32AA9B9EE00A2C4F4 /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		152C4FF92AA9BCDC00A2C4F4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				152C4FFA2AA9BDF300A2C4F4 /* PreviewSampleData.swift */,
+				152C4FFC2AA9C08200A2C4F4 /* SampleProject.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		1570EAB22AA96663003C78FD = {
+			isa = PBXGroup;
+			children = (
+				1570EABD2AA96663003C78FD /* GREBStudio */,
+				1570EACF2AA96664003C78FD /* GREBStudioTests */,
+				1570EAD92AA96665003C78FD /* GREBStudioUITests */,
+				1570EABC2AA96663003C78FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1570EABC2AA96663003C78FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1570EABB2AA96663003C78FD /* GREBStudio.app */,
+				1570EACC2AA96664003C78FD /* GREBStudioTests.xctest */,
+				1570EAD62AA96665003C78FD /* GREBStudioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1570EABD2AA96663003C78FD /* GREBStudio */ = {
+			isa = PBXGroup;
+			children = (
+				152C50002AA9CF1C00A2C4F4 /* Fonts */,
+				152C4FF92AA9BCDC00A2C4F4 /* Support */,
+				152C4FF22AA9B9A400A2C4F4 /* Models */,
+				152C4FF12AA9B99500A2C4F4 /* Views */,
+				1570EABE2AA96663003C78FD /* GREBStudioApp.swift */,
+				1570EAC22AA96664003C78FD /* Assets.xcassets */,
+				1570EAC72AA96664003C78FD /* GREBStudio.entitlements */,
+				1570EAC42AA96664003C78FD /* Preview Content */,
+			);
+			path = GREBStudio;
+			sourceTree = "<group>";
+		};
+		1570EAC42AA96664003C78FD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1570EAC52AA96664003C78FD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1570EACF2AA96664003C78FD /* GREBStudioTests */ = {
+			isa = PBXGroup;
+			children = (
+				1570EAD02AA96664003C78FD /* GREBStudioTests.swift */,
+			);
+			path = GREBStudioTests;
+			sourceTree = "<group>";
+		};
+		1570EAD92AA96665003C78FD /* GREBStudioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1570EADA2AA96665003C78FD /* GREBStudioUITests.swift */,
+				1570EADC2AA96665003C78FD /* GREBStudioUITestsLaunchTests.swift */,
+			);
+			path = GREBStudioUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1570EABA2AA96663003C78FD /* GREBStudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1570EAE02AA96665003C78FD /* Build configuration list for PBXNativeTarget "GREBStudio" */;
+			buildPhases = (
+				1570EAB72AA96663003C78FD /* Sources */,
+				1570EAB82AA96663003C78FD /* Frameworks */,
+				1570EAB92AA96663003C78FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GREBStudio;
+			productName = GREBStudio;
+			productReference = 1570EABB2AA96663003C78FD /* GREBStudio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1570EACB2AA96664003C78FD /* GREBStudioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1570EAE32AA96665003C78FD /* Build configuration list for PBXNativeTarget "GREBStudioTests" */;
+			buildPhases = (
+				1570EAC82AA96664003C78FD /* Sources */,
+				1570EAC92AA96664003C78FD /* Frameworks */,
+				1570EACA2AA96664003C78FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1570EACE2AA96664003C78FD /* PBXTargetDependency */,
+			);
+			name = GREBStudioTests;
+			productName = GREBStudioTests;
+			productReference = 1570EACC2AA96664003C78FD /* GREBStudioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1570EAD52AA96665003C78FD /* GREBStudioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1570EAE62AA96665003C78FD /* Build configuration list for PBXNativeTarget "GREBStudioUITests" */;
+			buildPhases = (
+				1570EAD22AA96665003C78FD /* Sources */,
+				1570EAD32AA96665003C78FD /* Frameworks */,
+				1570EAD42AA96665003C78FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1570EAD82AA96665003C78FD /* PBXTargetDependency */,
+			);
+			name = GREBStudioUITests;
+			productName = GREBStudioUITests;
+			productReference = 1570EAD62AA96665003C78FD /* GREBStudioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1570EAB32AA96663003C78FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					1570EABA2AA96663003C78FD = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					1570EACB2AA96664003C78FD = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 1570EABA2AA96663003C78FD;
+					};
+					1570EAD52AA96665003C78FD = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 1570EABA2AA96663003C78FD;
+					};
+				};
+			};
+			buildConfigurationList = 1570EAB62AA96663003C78FD /* Build configuration list for PBXProject "GREBStudio" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1570EAB22AA96663003C78FD;
+			productRefGroup = 1570EABC2AA96663003C78FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1570EABA2AA96663003C78FD /* GREBStudio */,
+				1570EACB2AA96664003C78FD /* GREBStudioTests */,
+				1570EAD52AA96665003C78FD /* GREBStudioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1570EAB92AA96663003C78FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				152C50012AA9CF1C00A2C4F4 /* Fonts in Resources */,
+				1570EAC62AA96664003C78FD /* Preview Assets.xcassets in Resources */,
+				1570EAC32AA96664003C78FD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1570EACA2AA96664003C78FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1570EAD42AA96665003C78FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1570EAB72AA96663003C78FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				152C4FF72AA9B9EF00A2C4F4 /* Entity.swift in Sources */,
+				152C50032AA9CFE000A2C4F4 /* GrebFonts.swift in Sources */,
+				1570EAC12AA96663003C78FD /* ContentView.swift in Sources */,
+				152C4FFB2AA9BDF300A2C4F4 /* PreviewSampleData.swift in Sources */,
+				152C500C2AAA214100A2C4F4 /* UserSettings.swift in Sources */,
+				152C4FF62AA9B9EF00A2C4F4 /* Task.swift in Sources */,
+				152C4FF82AA9B9EF00A2C4F4 /* Project.swift in Sources */,
+				1570EABF2AA96663003C78FD /* GREBStudioApp.swift in Sources */,
+				152C50052AA9D39700A2C4F4 /* EntityView.swift in Sources */,
+				152C4FFF2AA9CD1B00A2C4F4 /* ProjectView.swift in Sources */,
+				152C50082AA9E3FD00A2C4F4 /* TaskView.swift in Sources */,
+				152C500A2AA9ED7B00A2C4F4 /* InputPopupView.swift in Sources */,
+				152C4FFD2AA9C08200A2C4F4 /* SampleProject.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1570EAC82AA96664003C78FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1570EAD12AA96664003C78FD /* GREBStudioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1570EAD22AA96665003C78FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1570EADD2AA96665003C78FD /* GREBStudioUITestsLaunchTests.swift in Sources */,
+				1570EADB2AA96665003C78FD /* GREBStudioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1570EACE2AA96664003C78FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1570EABA2AA96663003C78FD /* GREBStudio */;
+			targetProxy = 1570EACD2AA96664003C78FD /* PBXContainerItemProxy */;
+		};
+		1570EAD82AA96665003C78FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1570EABA2AA96663003C78FD /* GREBStudio */;
+			targetProxy = 1570EAD72AA96665003C78FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1570EADE2AA96665003C78FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1570EADF2AA96665003C78FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		1570EAE12AA96665003C78FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GREBStudio/GREBStudio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GREBStudio/Preview Content\"";
+				DEVELOPMENT_TEAM = 5SAJ47B993;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UMA.GREBStudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		1570EAE22AA96665003C78FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GREBStudio/GREBStudio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GREBStudio/Preview Content\"";
+				DEVELOPMENT_TEAM = 5SAJ47B993;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UMA.GREBStudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		1570EAE42AA96665003C78FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5SAJ47B993;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UMA.GREBStudioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GREBStudio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GREBStudio";
+			};
+			name = Debug;
+		};
+		1570EAE52AA96665003C78FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5SAJ47B993;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UMA.GREBStudioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GREBStudio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GREBStudio";
+			};
+			name = Release;
+		};
+		1570EAE72AA96665003C78FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5SAJ47B993;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UMA.GREBStudioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GREBStudio;
+			};
+			name = Debug;
+		};
+		1570EAE82AA96665003C78FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5SAJ47B993;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UMA.GREBStudioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GREBStudio;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1570EAB62AA96663003C78FD /* Build configuration list for PBXProject "GREBStudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1570EADE2AA96665003C78FD /* Debug */,
+				1570EADF2AA96665003C78FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1570EAE02AA96665003C78FD /* Build configuration list for PBXNativeTarget "GREBStudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1570EAE12AA96665003C78FD /* Debug */,
+				1570EAE22AA96665003C78FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1570EAE32AA96665003C78FD /* Build configuration list for PBXNativeTarget "GREBStudioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1570EAE42AA96665003C78FD /* Debug */,
+				1570EAE52AA96665003C78FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1570EAE62AA96665003C78FD /* Build configuration list for PBXNativeTarget "GREBStudioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1570EAE72AA96665003C78FD /* Debug */,
+				1570EAE82AA96665003C78FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1570EAB32AA96663003C78FD /* Project object */;
+}
