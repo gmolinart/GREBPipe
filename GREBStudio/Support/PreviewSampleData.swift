@@ -1,9 +1,9 @@
 /*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A view modifier for showing sample data in previews.
-*/
+ See the LICENSE.txt file for this sample’s licensing information.
+ 
+ Abstract:
+ A view modifier for showing sample data in previews.
+ */
 
 import SwiftData
 import SwiftUI
@@ -12,27 +12,45 @@ import Foundation
 
 @MainActor
 let previewContainer: ModelContainer = {
-			let config = ModelConfiguration(isStoredInMemoryOnly: true)
+	let config = ModelConfiguration(isStoredInMemoryOnly: true)
+	
+	let container = try! ModelContainer(for: GProject.self,
+																			configurations: config)
+	
+	let localContext = ModelContext(container)
+	
+	
+	for project in SampleProject.contents {
+		container.mainContext.insert(project)
+		for entity in project.entities{
+			container.mainContext.insert(entity)
 			
-			let container = try! ModelContainer(for: GProject.self,
-																					configurations: config)
-			let localContext = ModelContext(container)
-				 
+			//					if case entity.tasks = entity.tasks {
+			//					for task in entity.tasks {
+			//							container.mainContext.insert(task)
+			//
+			//					}
+			//				}
 			
-			for project in SampleProject.contents {
-						container.mainContext.insert(project)
-				for entity in project.entities{
-					container.mainContext.insert(entity)
+		}
+	}
+	return container
+}()
 
-					if case entity.tasks = entity.tasks {
-					for task in entity.tasks {
-						// Your code here
-									container.mainContext.insert(task)
 
-					}
-				}
-									
-				}
-				}
-				return container
+@MainActor
+let previewEntitiesContainer: ModelContainer = {
+	let config = ModelConfiguration(isStoredInMemoryOnly: true)
+	
+	let container = try! ModelContainer(for: GEntity.self,
+																			configurations: config)
+	
+	let localContext = ModelContext(container)
+	
+	
+	for entity in SampleEntities.entities {
+		container.mainContext.insert(entity)
+	
+	}
+	return container
 }()

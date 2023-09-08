@@ -31,6 +31,14 @@ struct ProjectView: View {
 		VStack{
 				ZStack {
 					RoundedRectangle(cornerRadius: 10)
+					.fill(Color.gray)
+					.onTapGesture {
+						self.isPopupShown = true
+					}
+					.sheet(isPresented: $isPopupShown) {
+						EntityListView()
+					}
+					
 					.onHover { hover in
 						if hover {
 							RoundedRectangle(cornerRadius: 10)
@@ -39,7 +47,6 @@ struct ProjectView: View {
 					
 
 					Text(user_project.name)
-					
 						.font(GrebFont.title)
 				}
 				.padding()
