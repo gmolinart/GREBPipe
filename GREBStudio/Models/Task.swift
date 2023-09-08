@@ -101,20 +101,20 @@ import SwiftData
 		}
 	}
 	
-	static func preview() -> GTask{
-		
-		let project  = GProject(name: "indeleble",
-														category: "personal",
-														imageURL: "indeleble")
-		
-		let entity = GEntity(name: "sofia",
-												 project: project,
-												 category: "char" )
-		
-//		let task: GTask =  GTask(name: "mdl", entity:entity)
-		let task: GTask =  GTask(name: "mdl" )
-		return task
-	}
+//	static func preview() -> GTask{
+//		
+//		let project  = GProject(name: "indeleble",
+//														category: "personal",
+//														imageURL: "indeleble")
+//		
+//		let entity = GEntity(name: "sofia",
+//												 project: project,
+//												 category: "char" )
+//		
+////		let task: GTask =  GTask(name: "mdl", entity:entity)
+//		let task: GTask =  GTask(name: "mdl" )
+//		return task
+//	}
 	
 }
 

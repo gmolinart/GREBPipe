@@ -18,11 +18,12 @@ struct GREBStudioApp: App {
 //			AddProjectView()
 //				.modelContainer(for :GProject.self)
 			
-			
-			
 			ProjectView()
-				.modelContainer(for: [GProject.self])
+						.modelContainer(for: GProject.self)
+			
 		}
+			
+//		}
 			
 //				.modelContainer(for: [GProject.self])
 //		}

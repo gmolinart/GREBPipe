@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150F92172AAB878E00A14152 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150F92162AAB878E00A14152 /* UserSettings.swift */; };
 		152C4FF62AA9B9EF00A2C4F4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C4FF32AA9B9EE00A2C4F4 /* Task.swift */; };
 		152C4FF72AA9B9EF00A2C4F4 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C4FF42AA9B9EE00A2C4F4 /* Entity.swift */; };
 		152C4FF82AA9B9EF00A2C4F4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C4FF52AA9B9EF00A2C4F4 /* Project.swift */; };
@@ -18,7 +19,6 @@
 		152C50052AA9D39700A2C4F4 /* EntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C50042AA9D39700A2C4F4 /* EntityView.swift */; };
 		152C50082AA9E3FD00A2C4F4 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C50072AA9E3FD00A2C4F4 /* TaskView.swift */; };
 		152C500A2AA9ED7B00A2C4F4 /* InputPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C50092AA9ED7B00A2C4F4 /* InputPopupView.swift */; };
-		152C500C2AAA214100A2C4F4 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C500B2AAA214100A2C4F4 /* UserSettings.swift */; };
 		1570EABF2AA96663003C78FD /* GREBStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EABE2AA96663003C78FD /* GREBStudioApp.swift */; };
 		1570EAC12AA96663003C78FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EAC02AA96663003C78FD /* ContentView.swift */; };
 		1570EAC32AA96664003C78FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1570EAC22AA96664003C78FD /* Assets.xcassets */; };
@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		150F92162AAB878E00A14152 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		152C4FF32AA9B9EE00A2C4F4 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		152C4FF42AA9B9EE00A2C4F4 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		152C4FF52AA9B9EF00A2C4F4 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		152C50042AA9D39700A2C4F4 /* EntityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityView.swift; sourceTree = "<group>"; };
 		152C50072AA9E3FD00A2C4F4 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		152C50092AA9ED7B00A2C4F4 /* InputPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPopupView.swift; sourceTree = "<group>"; };
-		152C500B2AAA214100A2C4F4 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		1570EABB2AA96663003C78FD /* GREBStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREBStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1570EABE2AA96663003C78FD /* GREBStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GREBStudioApp.swift; sourceTree = "<group>"; };
 		1570EAC02AA96663003C78FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				152C50022AA9CFDF00A2C4F4 /* GrebFonts.swift */,
-				152C500B2AAA214100A2C4F4 /* UserSettings.swift */,
 				152C4FF52AA9B9EF00A2C4F4 /* Project.swift */,
 				152C4FF42AA9B9EE00A2C4F4 /* Entity.swift */,
 				152C4FF32AA9B9EE00A2C4F4 /* Task.swift */,
@@ -125,6 +124,7 @@
 			children = (
 				152C4FFA2AA9BDF300A2C4F4 /* PreviewSampleData.swift */,
 				152C4FFC2AA9C08200A2C4F4 /* SampleProject.swift */,
+				150F92162AAB878E00A14152 /* UserSettings.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -324,7 +324,7 @@
 				152C50032AA9CFE000A2C4F4 /* GrebFonts.swift in Sources */,
 				1570EAC12AA96663003C78FD /* ContentView.swift in Sources */,
 				152C4FFB2AA9BDF300A2C4F4 /* PreviewSampleData.swift in Sources */,
-				152C500C2AAA214100A2C4F4 /* UserSettings.swift in Sources */,
+				150F92172AAB878E00A14152 /* UserSettings.swift in Sources */,
 				152C4FF62AA9B9EF00A2C4F4 /* Task.swift in Sources */,
 				152C4FF82AA9B9EF00A2C4F4 /* Project.swift in Sources */,
 				1570EABF2AA96663003C78FD /* GREBStudioApp.swift in Sources */,
