@@ -12,7 +12,7 @@ import SwiftData
 
 struct ProjectView: View {
 	
-	@State private var isPopupShown: Bool = false
+	@State private var isEntityListVisible: Bool = false
 	@State private var project_name: String = ""
 	@State private var project: GProject?
 	@Query private var projects: [GProject]
@@ -21,7 +21,7 @@ struct ProjectView: View {
 	var body: some View {
 		
 		VStack(){
-			Image("GrebLogo")
+			Image("GREBLogo")
 				.resizable()
 				.scaledToFit()
 				.aspectRatio(contentMode: .fit)
@@ -29,37 +29,32 @@ struct ProjectView: View {
 				.padding()
 		}
 		VStack{
-				ZStack {
-					RoundedRectangle(cornerRadius: 10)
-					.fill(Color.gray)
-					.onTapGesture {
-						self.isPopupShown = true
-					}
-					.sheet(isPresented: $isPopupShown) {
-						EntityListView()
-					}
-					
-					.onHover { hover in
-						if hover {
-							RoundedRectangle(cornerRadius: 10)
-						}
-					}
-					
-
+			ZStack {
+				Spacer()
+				Button(action: {
+					self.isEntityListVisible = true
+				}) {
 					Text(user_project.name)
-						.font(GrebFont.title)
 				}
-				.padding()
-			
+				.sheet(isPresented: $isEntityListVisible) {
+					EntityListView()
+				}
+				
+			}
+			.padding()
 		}
+		
+		
+			.font(GrebFont.title)
 	}
 	
 }
 
 
+
 struct AddProjectView: View {
 	
-	@State private var isPopupShown: Bool = false
+	@State public var visibility: Bool = true
 	@State private var project_name: String = ""
 	@State private var project: GProject?
 	@Query private var projects: [GProject]
@@ -68,32 +63,32 @@ struct AddProjectView: View {
 	var body: some View {
 		
 		VStack(){
-			Image("GrebLogo")
+			Image("GREBLogo")
 				.resizable()
 				.scaledToFit()
 				.aspectRatio(contentMode: .fit)
-				.frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
 				.padding()
-			Text("Welcome, please add a project")
+			Text("PROJECTS")
 				.font(GrebFont.body)
 		}
 		VStack{
 			List{
 				ForEach(projects){ project in
 					Text(project.name)
-					
+						.font(GrebFont.body)
+						.onTapGesture {
+							self.visibility = false }
 				}
 			}
 		}
 		VStack{
 			TextField("Project Name", text: $project_name)
-					.font(GrebFont.body)
-					.padding()
-
+				.font(GrebFont.body)
+				.padding()
+			
 			Button(action: {
 				print(project_name)
 				modelContext.insert(GProject(name: project_name))
-				self.isPopupShown.toggle()
 			}) {
 				Text("Add Project")
 					.font(GrebFont.body)
@@ -115,14 +110,15 @@ struct AddProjectView: View {
 //
 //#Preview {
 //	AddProjectView()
-//	
+//
 //	ProjectView(project:GProject.preview())
 //}
 
 
 #Preview{
-//	AddProjectView()
+		AddProjectView()
+			.modelContainer(previewContainer)
 	
-	ProjectView()
-		.modelContainer(previewContainer)
+//	ProjectView()
+//		.modelContainer(previewContainer)
 }

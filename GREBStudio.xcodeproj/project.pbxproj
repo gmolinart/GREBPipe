@@ -26,6 +26,11 @@
 		1570EAD12AA96664003C78FD /* GREBStudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EAD02AA96664003C78FD /* GREBStudioTests.swift */; };
 		1570EADB2AA96665003C78FD /* GREBStudioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EADA2AA96665003C78FD /* GREBStudioUITests.swift */; };
 		1570EADD2AA96665003C78FD /* GREBStudioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EADC2AA96665003C78FD /* GREBStudioUITestsLaunchTests.swift */; };
+		15A87DD92AAC501800DEFC2C /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 15A87DD82AAC501800DEFC2C /* Flow */; };
+		15A87DDC2AAC50A200DEFC2C /* FlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A87DDB2AAC50A200DEFC2C /* FlowView.swift */; };
+		15A87DDE2AAC680500DEFC2C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A87DDD2AAC680400DEFC2C /* SearchView.swift */; };
+		15A87DE12AAC682700DEFC2C /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 15A87DE02AAC682700DEFC2C /* KeyboardShortcuts */; };
+		15A87DE32AACC75600DEFC2C /* FlowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A87DE22AACC75600DEFC2C /* FlowModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,10 @@
 		1570EAD62AA96665003C78FD /* GREBStudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GREBStudioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1570EADA2AA96665003C78FD /* GREBStudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GREBStudioUITests.swift; sourceTree = "<group>"; };
 		1570EADC2AA96665003C78FD /* GREBStudioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GREBStudioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		15A87DDA2AAC503500DEFC2C /* Flow */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Flow; path = ../../Flow; sourceTree = "<group>"; };
+		15A87DDB2AAC50A200DEFC2C /* FlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowView.swift; sourceTree = "<group>"; };
+		15A87DDD2AAC680400DEFC2C /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		15A87DE22AACC75600DEFC2C /* FlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A87DD92AAC501800DEFC2C /* Flow in Frameworks */,
+				15A87DE12AAC682700DEFC2C /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,11 +110,14 @@
 		152C4FF12AA9B99500A2C4F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				15A87DDD2AAC680400DEFC2C /* SearchView.swift */,
 				1570EAC02AA96663003C78FD /* ContentView.swift */,
 				152C50092AA9ED7B00A2C4F4 /* InputPopupView.swift */,
 				152C4FFE2AA9CD1B00A2C4F4 /* ProjectView.swift */,
 				152C50042AA9D39700A2C4F4 /* EntityView.swift */,
 				152C50072AA9E3FD00A2C4F4 /* TaskView.swift */,
+				15A87DDB2AAC50A200DEFC2C /* FlowView.swift */,
+				15A87DE22AACC75600DEFC2C /* FlowModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +199,7 @@
 			children = (
 				1570EADA2AA96665003C78FD /* GREBStudioUITests.swift */,
 				1570EADC2AA96665003C78FD /* GREBStudioUITestsLaunchTests.swift */,
+				15A87DDA2AAC503500DEFC2C /* Flow */,
 			);
 			path = GREBStudioUITests;
 			sourceTree = "<group>";
@@ -205,6 +220,10 @@
 			dependencies = (
 			);
 			name = GREBStudio;
+			packageProductDependencies = (
+				15A87DD82AAC501800DEFC2C /* Flow */,
+				15A87DE02AAC682700DEFC2C /* KeyboardShortcuts */,
+			);
 			productName = GREBStudio;
 			productReference = 1570EABB2AA96663003C78FD /* GREBStudio.app */;
 			productType = "com.apple.product-type.application";
@@ -277,6 +296,10 @@
 				Base,
 			);
 			mainGroup = 1570EAB22AA96663003C78FD;
+			packageReferences = (
+				15A87DD72AAC501800DEFC2C /* XCRemoteSwiftPackageReference "Flow" */,
+				15A87DDF2AAC682700DEFC2C /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
 			productRefGroup = 1570EABC2AA96663003C78FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -323,12 +346,15 @@
 				152C4FF72AA9B9EF00A2C4F4 /* Entity.swift in Sources */,
 				152C50032AA9CFE000A2C4F4 /* GrebFonts.swift in Sources */,
 				1570EAC12AA96663003C78FD /* ContentView.swift in Sources */,
+				15A87DE32AACC75600DEFC2C /* FlowModel.swift in Sources */,
 				152C4FFB2AA9BDF300A2C4F4 /* PreviewSampleData.swift in Sources */,
 				150F92172AAB878E00A14152 /* UserSettings.swift in Sources */,
 				152C4FF62AA9B9EF00A2C4F4 /* Task.swift in Sources */,
 				152C4FF82AA9B9EF00A2C4F4 /* Project.swift in Sources */,
 				1570EABF2AA96663003C78FD /* GREBStudioApp.swift in Sources */,
+				15A87DDC2AAC50A200DEFC2C /* FlowView.swift in Sources */,
 				152C50052AA9D39700A2C4F4 /* EntityView.swift in Sources */,
+				15A87DDE2AAC680500DEFC2C /* SearchView.swift in Sources */,
 				152C4FFF2AA9CD1B00A2C4F4 /* ProjectView.swift in Sources */,
 				152C50082AA9E3FD00A2C4F4 /* TaskView.swift in Sources */,
 				152C500A2AA9ED7B00A2C4F4 /* InputPopupView.swift in Sources */,
@@ -659,6 +685,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15A87DD72AAC501800DEFC2C /* XCRemoteSwiftPackageReference "Flow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/Flow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
+		15A87DDF2AAC682700DEFC2C /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15A87DD82AAC501800DEFC2C /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15A87DD72AAC501800DEFC2C /* XCRemoteSwiftPackageReference "Flow" */;
+			productName = Flow;
+		};
+		15A87DE02AAC682700DEFC2C /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15A87DDF2AAC682700DEFC2C /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1570EAB32AA96663003C78FD /* Project object */;
 }

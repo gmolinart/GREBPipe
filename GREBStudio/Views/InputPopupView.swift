@@ -81,6 +81,6 @@ struct InputPopupView: View {
 }
 
 
-//#Preview { InputPopupView(isShown:.constant(true), 
-//													currentProject: GProject.())
-//}
+#Preview { InputPopupView(isShown:.constant(true), 
+													currentProject: user_project)
+}
