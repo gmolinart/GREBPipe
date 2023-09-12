@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import OSLog
 
 struct EntityListView: View {
 	@Query private var entities: [GEntity]
@@ -54,8 +55,6 @@ struct EntityListView: View {
 	//  Created by Karin Prater on 12.12.22.
 	//
 	
-	import SwiftUI
-	import OSLog
 	
 #if os(macOS)
 	import AppKit

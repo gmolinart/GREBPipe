@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "flow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gmolinart/Flow/",
+      "state" : {
+        "revision" : "fe677cd81c1bee94a6e11203b47d544897e6720f",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "keyboardshortcuts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/KeyboardShortcuts",
+      "state" : {
+        "revision" : "b878f8132be59576fc87e39405b1914eff9f55d3",
+        "version" : "1.14.1"
+      }
+    }
+  ],
+  "version" : 2
+}

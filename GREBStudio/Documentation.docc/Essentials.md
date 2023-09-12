@@ -1,6 +1,19 @@
 # Essentials
 
-<!--@START_MENU_TOKEN@-->Summary<!--@END_MENU_TOKEN@-->
+@Metadata{
+	@PageImage(
+						 purpose: icon,
+						 source: "searchbar"
+						 )
+	@PageColor(yellow)
+}
+
+@Links(visualStyle: detailedGrid){
+	
+- <doc:What-is-a-node>
+}
+
+- <doc:What-is-a-node>
 
 ## Overview
 

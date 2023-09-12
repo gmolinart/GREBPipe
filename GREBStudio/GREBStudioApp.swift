@@ -26,30 +26,34 @@ struct GREBStudioApp: App {
 	//		}
 	
 	var body: some Scene {
-		WindowGroup(){
 			//
 			let viewModel : FlowViewModel = SharedData.viewModel
+			
+			MenuBarExtra("GREB", image: "GREBIcon")  {
+				ScrollView {
+				FlowWindow(viewModel: viewModel)
+					}
+				
+//				ProjectView()
+//					.modelContainer(for: [GEntity.self, GProject.self] )
+//				EntityListView()
+//				.modelContainer(for: [GEntity.self, GProject.self] )
+				
+			}
+				
+				
+									
 			
 //			ProjectView()
 //				.modelContainer(for: [GEntity.self, GProject.self] )
 			
-			EntityListView()
-				.modelContainer(for: [GEntity.self, GProject.self] )
+//			EntityListView()
+//				.modelContainer(for: [GEntity.self, GProject.self] )
 			
 			
 		
 		}
 		
-			//
-			//			if viewModel.isFlowViewVisible{
-			//
-			//				FlowWindow(viewModel: viewModel)
-//			ProjectView()
-//				.modelContainer(for: [GEntity.self, GProject.self] )
-			//			}
-//		}
-//		.windowStyle(HiddenTitleBarWindowStyle())
-	}
 }
 
 
@@ -78,10 +82,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		
 		
 		
-		let contentView = NSHostingView(rootView: FlowView(viewModel: SharedData.viewModel))
+		let contentView = NSHostingView(rootView: FlowWindow(viewModel: SharedData.viewModel))
 		
-//		contentView.autoresizingMask = [.width, .height]
-//		contentView.frame(forAlignmentRect: NSRect(x: 0, y: 0, width: 500, height: 500))
+		contentView.frame(forAlignmentRect: NSRect(x: 0, y: 0, width: 500, height: 500))
 		
 		flow.contentView = contentView
 		flow.makeKeyAndOrderFront(nil)
@@ -92,26 +95,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		let horizontalCenter = (screenSize!.width - flowSize.width) / 2
 		flow.setFrameOrigin(NSPoint(x: horizontalCenter, y: flow.frame.origin.y))
 		
-		// Store the size of the window
-//		let windowSize = flow.frame.size
 
 		// Toggle visibility of the window using SharedData.viewModel.isFlowVisible
 		SharedData.viewModel.isFlowViewVisible = !SharedData.viewModel.isFlowViewVisible
-		// Set the window size to 700x700
-		// Set content view to 500x500
-		
-		
-		// If the window is visible, restore its size
-
-//     viewModel.$isFlowViewVisible.sink { isVisible in
-//            if isVisible {
-//                self.project_window?.orderFront(nil)
-//            } else {
-//                self.project_window?.orderOut(nil)
-//            }
-//        }.store(in: &cancellables)
+	
     }
-//	private var cancellables = Set<AnyCancellable>()
 		
 }
 		
@@ -131,7 +119,10 @@ final class AppState: ObservableObject {
 
 extension KeyboardShortcuts.Name {
 	static let toggleSearchBar = Self("toggleUnicornMode", default: .init(.k, modifiers: [.command, .option]))
+	static let searchNextOption = Self("searchNextOption", default: .init(.n, modifiers: [.control]))
 }
+
+
 
 #endif
 
