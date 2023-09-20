@@ -19,6 +19,7 @@
 		152C50052AA9D39700A2C4F4 /* EntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C50042AA9D39700A2C4F4 /* EntityView.swift */; };
 		152C50082AA9E3FD00A2C4F4 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C50072AA9E3FD00A2C4F4 /* TaskView.swift */; };
 		152C500A2AA9ED7B00A2C4F4 /* InputPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C50092AA9ED7B00A2C4F4 /* InputPopupView.swift */; };
+		153944D02AB242F900DB731A /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153944CF2AB242F900DB731A /* Operator.swift */; };
 		1570EABF2AA96663003C78FD /* GREBStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EABE2AA96663003C78FD /* GREBStudioApp.swift */; };
 		1570EAC12AA96663003C78FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EAC02AA96663003C78FD /* ContentView.swift */; };
 		1570EAC32AA96664003C78FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1570EAC22AA96664003C78FD /* Assets.xcassets */; };
@@ -28,11 +29,13 @@
 		1570EADD2AA96665003C78FD /* GREBStudioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570EADC2AA96665003C78FD /* GREBStudioUITestsLaunchTests.swift */; };
 		15A87DDC2AAC50A200DEFC2C /* FlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A87DDB2AAC50A200DEFC2C /* FlowView.swift */; };
 		15A87DDE2AAC680500DEFC2C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A87DDD2AAC680400DEFC2C /* SearchView.swift */; };
-		15A87DE12AAC682700DEFC2C /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 15A87DE02AAC682700DEFC2C /* KeyboardShortcuts */; };
 		15A87DE32AACC75600DEFC2C /* FlowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A87DE22AACC75600DEFC2C /* FlowModel.swift */; };
 		15B4185E2AB089C000D64728 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 15B4185D2AB089C000D64728 /* README.md */; };
 		15B418602AB08FCC00D64728 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 15B4185F2AB08FCC00D64728 /* Documentation.docc */; };
 		15B418632AB0A2F800D64728 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = 15B418622AB0A2F800D64728 /* Flow */; };
+		15B418662AB0D72400D64728 /* snippet-extract in Frameworks */ = {isa = PBXBuildFile; productRef = 15B418652AB0D72400D64728 /* snippet-extract */; };
+		15B4186B2AB1496200D64728 /* FramelessWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B4186A2AB1496200D64728 /* FramelessWindow.swift */; };
+		15B4186D2AB1498B00D64728 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B4186C2AB1498B00D64728 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,7 @@
 		152C50042AA9D39700A2C4F4 /* EntityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityView.swift; sourceTree = "<group>"; };
 		152C50072AA9E3FD00A2C4F4 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		152C50092AA9ED7B00A2C4F4 /* InputPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPopupView.swift; sourceTree = "<group>"; };
+		153944CF2AB242F900DB731A /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		1570EABB2AA96663003C78FD /* GREBStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GREBStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1570EABE2AA96663003C78FD /* GREBStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GREBStudioApp.swift; sourceTree = "<group>"; };
 		1570EAC02AA96663003C78FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +85,9 @@
 		15A87DE22AACC75600DEFC2C /* FlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowModel.swift; sourceTree = "<group>"; };
 		15B4185D2AB089C000D64728 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		15B4185F2AB08FCC00D64728 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		15B4186A2AB1496200D64728 /* FramelessWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramelessWindow.swift; sourceTree = "<group>"; };
+		15B4186C2AB1498B00D64728 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		15CF71F22AB49F9B002FA0BC /* PostageOffice.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = PostageOffice.playground; path = ../PostageOffice.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B418662AB0D72400D64728 /* snippet-extract in Frameworks */,
 				15B418632AB0A2F800D64728 /* Flow in Frameworks */,
-				15A87DE12AAC682700DEFC2C /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +128,7 @@
 				152C50072AA9E3FD00A2C4F4 /* TaskView.swift */,
 				15A87DDB2AAC50A200DEFC2C /* FlowView.swift */,
 				15A87DE22AACC75600DEFC2C /* FlowModel.swift */,
+				15B4186A2AB1496200D64728 /* FramelessWindow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +140,8 @@
 				152C4FF52AA9B9EF00A2C4F4 /* Project.swift */,
 				152C4FF42AA9B9EE00A2C4F4 /* Entity.swift */,
 				152C4FF32AA9B9EE00A2C4F4 /* Task.swift */,
+				15B4186C2AB1498B00D64728 /* Environment.swift */,
+				153944CF2AB242F900DB731A /* Operator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +159,7 @@
 		1570EAB22AA96663003C78FD = {
 			isa = PBXGroup;
 			children = (
+				15CF71F22AB49F9B002FA0BC /* PostageOffice.playground */,
 				1570EABD2AA96663003C78FD /* GREBStudio */,
 				1570EACF2AA96664003C78FD /* GREBStudioTests */,
 				1570EAD92AA96665003C78FD /* GREBStudioUITests */,
@@ -225,8 +236,8 @@
 			);
 			name = GREBStudio;
 			packageProductDependencies = (
-				15A87DE02AAC682700DEFC2C /* KeyboardShortcuts */,
 				15B418622AB0A2F800D64728 /* Flow */,
+				15B418652AB0D72400D64728 /* snippet-extract */,
 			);
 			productName = GREBStudio;
 			productReference = 1570EABB2AA96663003C78FD /* GREBStudio.app */;
@@ -298,11 +309,13 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = 1570EAB22AA96663003C78FD;
 			packageReferences = (
 				15A87DDF2AAC682700DEFC2C /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 				15B418612AB0A2F800D64728 /* XCRemoteSwiftPackageReference "Flow" */,
+				15B418642AB0D6DC00D64728 /* XCRemoteSwiftPackageReference "swift-docc-plugin" */,
 			);
 			productRefGroup = 1570EABC2AA96663003C78FD /* Products */;
 			projectDirPath = "";
@@ -362,7 +375,10 @@
 				15A87DDE2AAC680500DEFC2C /* SearchView.swift in Sources */,
 				152C4FFF2AA9CD1B00A2C4F4 /* ProjectView.swift in Sources */,
 				15B418602AB08FCC00D64728 /* Documentation.docc in Sources */,
+				15B4186B2AB1496200D64728 /* FramelessWindow.swift in Sources */,
+				15B4186D2AB1498B00D64728 /* Environment.swift in Sources */,
 				152C50082AA9E3FD00A2C4F4 /* TaskView.swift in Sources */,
+				153944D02AB242F900DB731A /* Operator.swift in Sources */,
 				152C500A2AA9ED7B00A2C4F4 /* InputPopupView.swift in Sources */,
 				152C4FFD2AA9C08200A2C4F4 /* SampleProject.swift in Sources */,
 			);
@@ -524,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = GREBStudio/GREBStudio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -554,6 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = GREBStudio/GREBStudio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -709,18 +727,26 @@
 				minimumVersion = 1.0.3;
 			};
 		};
+		15B418642AB0D6DC00D64728 /* XCRemoteSwiftPackageReference "swift-docc-plugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-docc-plugin";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		15A87DE02AAC682700DEFC2C /* KeyboardShortcuts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 15A87DDF2AAC682700DEFC2C /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
-			productName = KeyboardShortcuts;
-		};
 		15B418622AB0A2F800D64728 /* Flow */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 15B418612AB0A2F800D64728 /* XCRemoteSwiftPackageReference "Flow" */;
 			productName = Flow;
+		};
+		15B418652AB0D72400D64728 /* snippet-extract */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15B418642AB0D6DC00D64728 /* XCRemoteSwiftPackageReference "swift-docc-plugin" */;
+			productName = "snippet-extract";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,18 +1,18 @@
 import SwiftUI
-import AppKit
+//import AppKit
 
-import AppKit
-import KeyboardShortcuts
+//import AppKit
 import Combine
 
 
 
 struct ScaleWithWindow: ViewModifier {
 	var count: Int
+
 	
 	func body(content: Content) -> some View {
 		content
-			.frame(width: 700, height: 
+			.frame(width: 700, height:
 							count == 0 ? 70 :
 							(count == 1 ? 115 :
 								(count == 2 ? 165 :
@@ -33,23 +33,26 @@ extension View {
 }
 
 
-extension NSImage {
-	func resize(to newSize: NSSize) -> NSImage {
-		let newImage = NSImage(size: newSize)
-		newImage.lockFocus()
-		self.draw(in: NSRect(origin: .zero, size: newSize), from: .zero, operation: .copy, fraction: 1.0)
-		newImage.unlockFocus()
-		return newImage
-	}
-}
+//extension NSImage {
+//	func resize(to newSize: NSSize) -> NSImage {
+//		let newImage = NSImage(size: newSize)
+//		newImage.lockFocus()
+//		self.draw(in: NSRect(origin: .zero, size: newSize), from: .zero, operation: .copy, fraction: 1.0)
+//		newImage.unlockFocus()
+//		return newImage
+//	}
+//}
 
 class Search: ObservableObject {
 	
 	
+	@State private var window: NSWindow?	
 	
-	
+	@Published public var windowPosition = CGPoint(x: 0, y: 0)
 	@Published public var text: String = ""
 	@Published public var typeahead: String = ""
+	
+	public var index : Int = 0
 	
 	public var filteredOptions: [String] {
 		options.filter { $0.contains(text) }
@@ -63,9 +66,9 @@ class Search: ObservableObject {
 																						 "create shot",
 																						 "go in",
 																						 "go out",
-	"add input",
-	"add output",
-	"settings",]
+																						 "add input",
+																						 "add output",
+																						 "settings"]
 	
 	
 	public func is_match(option:String) -> Bool {
@@ -75,8 +78,23 @@ class Search: ObservableObject {
 	init() {
 		
 	}
+	public func move_down(){
+		print("addding")
+		index += 1
+		let filteredItems = self.filteredOptions
+		if self.index < filteredItems.count {
+			self.typeahead = filteredItems[self.index]
+		} else {
+			self.typeahead = ""
+			self.index = 0
+		}
+	}
 	
-	public func execute(searchText:String,viewModel:FlowViewModel) {
+	public func execute(searchText:String) {
+		
+		var viewModel = FlowViewModel()
+		let searchView = SearchView(model: Search(), viewModel: viewModel, currentSelectionIndex: 0)
+		
 		if searchText == "entities" {
 			// Toggle entities window
 			// Assuming there is a method toggleEntitiesWindow() to do this
@@ -96,65 +114,70 @@ class Search: ObservableObject {
 			viewModel.flowOff()
 		}
 	}
-
+	
 }
 
 struct SearchView: View {
 	
 	var model : Search
 	var viewModel: FlowViewModel
-	public var filteredOptions: [String] {
-		options.filter { $0.contains(searchText) }
-	}
-	public var count: Int {
-		filteredOptions.count
-	}
-	@State public var currentSelectedAutoSelection: String = ""
-	@State public var selectedIndex: Int = 0 {
-		didSet {
-			print("selectedIndex didSet to \(selectedIndex)")
-		}
-	}
-	
+	@State var options: [String] = []
 	@State public var searchText: String = ""
+	@State public var count: Int = 0
+	@State public var currentSelectionIndex: Int
+//	public var filteredOptions: [String] {
+//		options.filter { $0.contains(searchText) }
+//	}
+//	@State public var currentSelectedAutoSelection: String = ""
+//	@State public var selectedIndex: Int = 0 {
+//		didSet {
+//			print("selectedIndex didSet to \(selectedIndex)")
+//		}
+//	}
 	
-	// Focus state
-	public enum Field: Int, Hashable {
-		case name, location, date, addAttendee
-	}
+	
+//	// Focus state
+//	public enum Field: Int, Hashable {
+//		case name, location, date, addAttendee
+//	}
 
-	@FocusState public var focusedField: Field?
-	
-	
-	@State var options: [String]
-	
-	init(model:Search , viewModel:FlowViewModel) {
-		self.viewModel = viewModel
-		self.model = model
-		self.options = model.options
-		
-		
-	}
+//	@FocusState public var focusedField: Field?
 	
 	
 	
+//	init(model:Search , viewModel:FlowViewModel ) {
+//		self.viewModel = viewModel
+//		self.model = model
+//		self.options = model.options
+//		self.searchText = ""
+//		self.count = model.filteredOptions.count
+//	}
 	
 	
-	@State private var currentSelectionIndex: Int = 0
 	
 	var body: some View {
 		ZStack {
 			RoundedRectangle(cornerRadius: 20)
-				.fill(Color(NSColor.main.cgColor))
+			.fill(Color.main)
 				.shadow(color: Color.black.opacity(1), radius: 0, x: -10, y: 10)
 				.overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 5))
-				.scaleWithWindow(count: count)
+				.scaleWithWindow(count: model.filteredOptions.count)
 			VStack(spacing: 0) {
 				HStack(spacing: 20) {
 					Image("search_icon")
 						.resizable(resizingMode: .stretch)
 						.frame(width: 40, height: 40)
 						.padding(10)
+					//            .gesture(
+					////                DragGesture()
+					//                    .onChanged { value in
+					//											model.windowPosition.x += value.translation.width
+					//                        model.windowPosition.y += value.translation.height
+					//                        // Here you should update the position of the window
+					//                        // using the windowPosition variable
+					//											print(value.translation.width)
+					//                    }
+					//            )
 					if(!searchText.isEmpty) {
 						
 						Image(systemName: "pencil")
@@ -163,8 +186,8 @@ struct SearchView: View {
 							.padding(.leading,-10)
 							.foregroundColor(.black)
 					}
- 
-						
+					
+					
 					
 					ZStack(alignment: .leading) {
 						if searchText.isEmpty {
@@ -175,128 +198,160 @@ struct SearchView: View {
 								.font(.custom("JetBrainsMonoNL-Bold", size: 24))
 						}
 						TextField("", text: $searchText,
-						
-							onCommit:{
-								model.execute(searchText: searchText, viewModel: viewModel)
-								self.searchText = ""
-
-							
-								NSApplication.shared.keyWindow?.orderOut(nil)
-								
-							}
+											onCommit:{
+							model.execute(searchText: searchText)
+							self.searchText = ""
+						}
 						)
-							.font(.custom("JetBrainsMonoNL-Bold", size: 24))
-							.textFieldStyle(PlainTextFieldStyle())
-							.onChange(of: searchText) { newValue in
-								model.text = searchText
-							}
-							.foregroundColor(Color.black)
-							.focused($focusedField, equals: .addAttendee)
-							.onAppear {
-								NSApplication.shared.keyWindow?.makeFirstResponder(nil)
-							}
-							.background(Color.clear)
-							.scrollContentBackground(/*@START_MENU_TOKEN@*/.hidden/*@END_MENU_TOKEN@*/)
-							.clipped(antialiased: true)
+						.font(.custom("JetBrainsMonoNL-Bold", size: 24))
+						.textFieldStyle(PlainTextFieldStyle())
+								.onChange(of: searchText) { newValue in
+										print( searchText)
+										model.text = searchText
+								}
+						.foregroundColor(Color.black)
+						//						.focused($focusedField, equals: .addAttendee)
+						//						.onAppear {
+						//							NSApplication.shared.keyWindow?.makeFirstResponder(nil)
+						//						}
+						.background(Color.clear)
+						.scrollContentBackground(/*@START_MENU_TOKEN@*/.hidden/*@END_MENU_TOKEN@*/)
+						.clipped(antialiased: true)
 						
-
-							// .tabItem : { /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Item Label@*/Text("Label")/*@END_MENU_TOKEN@*/ }
+						
 						
 					}
 					
+					Button("submit"){
+						print("hello world")
+						
+					}
+					.foregroundStyle(.black)
+					.keyboardShortcut(KeyEquivalent("n"), modifiers: .control)
+					.background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+					
 				}
-				
-				SuggestionsListView(options:filteredOptions,model: self.model)
-			.padding(3)
-			.offset(CGSize(width: 0, height: -25))
-			}
+//					SuggestionsListView(options:["test","test2"], model : Search())
+//				SuggestionView(option: "hello")
+	
+
+				SuggestionsListView(options: model.filteredOptions, model: Search())
+				}
 			.padding(0)
-			.scaleWithWindow(count: count)
+			.scaleWithWindow(count: model.filteredOptions.count)
+						//					.background(Color(.accent))
+				
 		}
-		.overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 8))
-		.frame(width: 700, height: 500, alignment: .topLeading)
+		.overlay(RoundedRectangle(cornerRadius: 20)
+			.stroke(Color.black, lineWidth: 8))
 		.animation(.interpolatingSpring)
 		.padding(15)
+		
 	}
 }
 
-final class SearchWindow: NSPanel {
+//
+//final class SearchWindow: NSPanel {
+//	var panelContent: SearchView!
+//	var viewModel : FlowViewModel
+//	var model: Search =  Search()
+//	var index : Int = 0
+//
+//
+//	init(contentRect: NSRect,
+//			 backing: NSWindow.BackingStoreType,
+//			 defer flag: Bool,
+//			 viewModel:FlowViewModel) {
+//		self.viewModel = viewModel
+//		super.init(contentRect: contentRect, styleMask: [.nonactivatingPanel,.borderless, .titled, .fullSizeContentView], backing: backing, defer: flag)
+//
+//		// Make sure that the panel is in front of almost all other windows
+////		self.isFloatingPanel = false
+//		self.level = .floating
+//
+//		// Allow the panel to appear in a fullscreen space
+//		self.collectionBehavior.insert(.fullScreenAuxiliary)
+//
+//		self.isOpaque = false
+//		self.backgroundColor = .clear
+//
+//		self.titlebarAppearsTransparent = true
+//		self.contentView = NSHostingView(rootView: panelContent)
+//		self.isMovableByWindowBackground = true
+//
+//		// Add keyboard shortcut (Command + period) for opening and closing the floating panel.
+//
+//
+//		panelContent = SearchView(model:model, viewModel: viewModel)
+//
+//
+//
+//		panelContent.onAppear {
+//			self.panelContent.focusedField = .addAttendee
+//					}
+//
+//
+//		KeyboardShortcuts.onKeyUp(for: .searchNextOption) {
+//
+//			self.index += 1
+//			// Protect against Thread 1: Fatal error: Index out of range
+//			let filteredItems = self.model.filteredOptions
+//			if self.index < (filteredItems.count + 1) {
+//				self.model.typeahead = filteredItems[self.index-1]
+//			} else {
+//				self.model.typeahead = ""
+//				self.index = 0
+//			}
+//
+//
+//
+//
+//
+//			print("DBUG:::::::::::")
+//			print("_________\(self.index)")
+//			print("model \(self.model.filteredOptions)")
+//			print("type ahead \(self.model.typeahead)")
+//
+//			print("text: \(self.panelContent.model.text)")
+//			//    print("count: \(self.panelContent.$count)")
+//			//    print("filteredOptions: \(self.panelContent.$filteredOptions)")
+//
+//		}
+//
+//
+//		KeyboardShortcuts.onKeyUp(for: .toggleSearchBar) {
+//			if self.isVisible {
+//				self.orderOut(nil)
+//			} else {
+//				self.makeKeyAndOrderFront(nil)
+//			}
+//		}
+//	}
+//}
+
+
+
+final class SearchWindow: View {
 	var panelContent: SearchView!
 	var viewModel : FlowViewModel
-	
 	var model: Search =  Search()
-	var index : Int = 0
+	var isVisible: Bool = true
 	
 	
-	init(contentRect: NSRect,
-			 backing: NSWindow.BackingStoreType,
-			 defer flag: Bool,
-			 viewModel:FlowViewModel) {
+		
+	init(viewModel:FlowViewModel) {
 		self.viewModel = viewModel
-		super.init(contentRect: contentRect, styleMask: [.nonactivatingPanel,.borderless, .titled, .fullSizeContentView], backing: backing, defer: flag)
-		
-		panelContent = SearchView(model:model, viewModel: viewModel)
-		// Make sure that the panel is in front of almost all other windows
-//		self.isFloatingPanel = false
-		self.level = .floating
-		
-		// Allow the panel to appear in a fullscreen space
-		self.collectionBehavior.insert(.fullScreenAuxiliary)
-		
-		self.isOpaque = false
-		self.backgroundColor = .clear
-		
-		self.titlebarAppearsTransparent = true
-		self.contentView = NSHostingView(rootView: panelContent)
-		self.isMovableByWindowBackground = true
-		
-		// Add keyboard shortcut (Command + period) for opening and closing the floating panel.
-		panelContent.onAppear {
-			self.panelContent.focusedField = .addAttendee
-					}
+		self.panelContent = SearchView(model: model, viewModel: viewModel, currentSelectionIndex: 000)
+	}
 
-		
-		KeyboardShortcuts.onKeyUp(for: .searchNextOption) {
-			
-			self.index += 1
-			// Protect against Thread 1: Fatal error: Index out of range
-			let filteredItems = self.model.filteredOptions
-			if self.index < (filteredItems.count + 1) {
-				self.model.typeahead = filteredItems[self.index-1]
-			} else {
-				self.model.typeahead = ""
-				self.index = 0
-			}
-			
-			
-			
-			
-			
-			print("DBUG:::::::::::")
-			print("_________\(self.index)")
-			print("model \(self.model.filteredOptions)")
-			print("type ahead \(self.model.typeahead)")
-			
-			print("text: \(self.panelContent.model.text)")
-			//    print("count: \(self.panelContent.$count)")
-			//    print("filteredOptions: \(self.panelContent.$filteredOptions)")
-			
-		}
-		
-		
-		KeyboardShortcuts.onKeyUp(for: .toggleSearchBar) {
-			if self.isVisible {
-				self.orderOut(nil)
-			} else {
-				self.makeKeyAndOrderFront(nil)
-			}
-		}
+	var body: some View {
+		SearchView(model:model, viewModel: viewModel, currentSelectionIndex: 0)
 	}
 }
 
 struct SuggestionView: View {
 	var option: String
-	@ObservedObject var model : Search
+	@ObservedObject var model : Search = Search()
 	
 	var body: some View {
 		HStack(spacing: 0) {
@@ -306,7 +361,7 @@ struct SuggestionView: View {
 					.frame(width: 670, height: 55, alignment: .center)
 					.padding(10)
 					.scaleEffect(CGSize(width: 1.1, height: 1.0))
-//					.shadow(color: Color.black.opacity(1), radius: 0, x: -10, y: 10)
+				//					.shadow(color: Color.black.opacity(1), radius: 0, x: -10, y: 10)
 				
 				HStack{
 					Image(systemName: "")
@@ -339,7 +394,7 @@ struct SuggestionView: View {
 }
 
 struct SuggestionsListView: View {
-	var options : [String]
+	var options : [String] = Search().options
 	var model : Search
 	var body: some View {
 		
@@ -350,29 +405,32 @@ struct SuggestionsListView: View {
 			//				.background(Color(.main))
 			//					.background(Color(.accent))
 		}
-			.listRowBackground(Color.main)
-			.scrollContentBackground(.hidden)
-			
-			
-		}
+		.listRowBackground(Color.main)
+		.scrollContentBackground(.hidden)
+		
+		
+	}
 }
 
 #if DEBUG
 struct SearchView_Previews: PreviewProvider {
 	static var previews: some View {
 		let viewModel = FlowViewModel()
-		SearchView(model : Search() , viewModel: viewModel)
+		SearchView(model : Search(), viewModel: viewModel, currentSelectionIndex: 0)
 	}
 }
 
 #endif
 
 #Preview("suggestion") {
-	SuggestionView(option: "pizza",model : Search())
+	SuggestionView(option: "pizza",
+								 model : Search())
 	
 }
 
 #Preview("suggestionList") {
+	
+	
 	SuggestionsListView(options:Search().options, model : Search())
 	
 }

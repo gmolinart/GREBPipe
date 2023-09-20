@@ -41,7 +41,7 @@ struct FlowWindow: View {
 				
 			FlowView(viewModel: viewModel)
                .onTapGesture {
-                   NSApplication.shared.keyWindow?.isMovableByWindowBackground = false
+//                   NSApplication.shared.keyWindow?.isMovableByWindowBackground = false
                }
 			.modelContainer(previewEntitiesContainer)
 			Group{
@@ -67,7 +67,7 @@ struct FlowWindow: View {
 		
 		.padding(10)
 		.onAppear {
-			NSApplication.shared.keyWindow?.makeFirstResponder(nil)
+//			NSApplication.shared.keyWindow?.makeFirstResponder(nil)
 		}
 		}
 //		form {
@@ -96,7 +96,7 @@ struct FlowView: View {
 					ZStack{
 						
 						RoundedRectangle(cornerRadius: 20)
-							.fill(Color(NSColor.background.cgColor))
+							.fill(Color("cgColor"))
 							.shadow(color: Color.black.opacity(1), radius: 0, x: -10, y: 10)
 							.overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 5))
 							.padding(10)
@@ -114,7 +114,6 @@ struct FlowView: View {
 					}
 					.padding(10)
 				}
-               .frame(width: 1200, height: 800)
 			   
 			   
 //							 .padding(10)
@@ -142,41 +141,41 @@ struct FlowView: View {
 //			.modelContainer(previewEntitiesContainer)
 //}
 
-final class FlowPanel: NSPanel {
-	var panelContent: FlowWindow!
-	@ObservedObject var viewModel: FlowViewModel
-	
-	init(viewModel:FlowViewModel, contentRect: NSRect, backing: NSWindow.BackingStoreType, defer flag: Bool) {
-		self.viewModel = viewModel
-		super.init(contentRect: contentRect,
-							 styleMask: [.resizable, .fullSizeContentView],
-							 backing: backing,
-							 defer: flag)
-		
-		self.isOpaque = false
-		self.backgroundColor = .clear
-		
+//final class FlowPanel: NSPanel {
+//	var panelContent: FlowWindow!
+//	@ObservedObject var viewModel: FlowViewModel
+//	
+//	init(viewModel:FlowViewModel, contentRect: NSRect, backing: NSWindow.BackingStoreType, defer flag: Bool) {
+//		self.viewModel = viewModel
+//		super.init(contentRect: contentRect,
+//							 styleMask: [.resizable, .fullSizeContentView],
+//							 backing: backing,
+//							 defer: flag)
+//		
+//		self.isOpaque = false
+//		self.backgroundColor = .clear
+//		
+////
 //
-
-//		self.titlebarAppearsTransparent = true
-//		self.contentView = NSHostingView(rootView: panelContent)
-		NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
-			if $0.modifierFlags.contains(.command) {
-				print("Command key is pressed")
-				self.isMovableByWindowBackground = true
-			}
-			else {
-				self.isMovableByWindowBackground = false
-			}
-			return $0
-		}
-		
-
-		
-	}
-	
-	
-}
+////		self.titlebarAppearsTransparent = true
+////		self.contentView = NSHostingView(rootView: panelContent)
+//		NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
+//			if $0.modifierFlags.contains(.command) {
+//				print("Command key is pressed")
+//				self.isMovableByWindowBackground = true
+//			}
+//			else {
+//				self.isMovableByWindowBackground = false
+//			}
+//			return $0
+//		}
+//		
+//
+//		
+//	}
+//	
+//	
+//}
 //
 //// #Preview {
 //// //	view.generateNodesFromEntities()
